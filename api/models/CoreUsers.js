@@ -1,5 +1,5 @@
 module.exports = {
-  tableName: 'user',
+  tableName: 'core_users',
   attributes: {
   
     name: {
@@ -18,9 +18,9 @@ module.exports = {
         type: 'string',
         columnType: 'varchar'
     },
-    birthday: {
-        type: 'string',
-        columnType: 'varchar'
+    birth_date: {
+        type: 'ref',
+        columnType: 'date'
     },
     address: {
         type: 'string',
@@ -30,7 +30,7 @@ module.exports = {
         type: 'string',
         columnType: 'varchar'
     },
-    sex: {
+    gender: {
         type: 'number',
         columnType: 'tinyint'
     },
@@ -38,15 +38,15 @@ module.exports = {
         type: 'string',
         columnType: 'varchar'
     },
-    idFacebook: {
+    id_facebook: {
         type: 'string',
         columnType: 'varchar'
     },
-    idGoogle: {
+    id_google: {
         type: 'string',
         columnType: 'varchar'
     },
-    areacode: {
+    city: {
         type: 'number',
         columnType: 'int'
     },
@@ -54,29 +54,17 @@ module.exports = {
         type: 'number',
         columnType: 'int'
     },
-    class: {
+    registered_at_software: {
         type: 'number',
         columnType: 'int'
     },
-    classname: {
-        type: 'string',
-        columnType: 'varchar'
-    },
-    schoolname: {
-        type: 'string',
-        columnType: 'varchar'
-    },
-    registeredAtSoftware: {
-        type: 'number',
-        columnType: 'int'
-    },
-    registeredAtSite: {
+    registered_at_site: {
         type: 'number',
         columnType: 'int'
     },
     note: {
         type: 'string',
-        columnType: 'varchar'
+        columnType: 'text'
     },
     registered: {
         type: 'ref',
@@ -85,15 +73,6 @@ module.exports = {
     lastlogined: {
         type: 'ref',
         columnType: 'datetime'
-    },
-    resellerId: {
-        type: 'number',
-        columnType: 'int'
-    },
-    coupon: {
-        type: 'string',
-        columnType: 'varchar'
     }
-    
   }
 };
